@@ -1,0 +1,85 @@
+/* استایل کلی صفحه */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    padding: 2rem;
+    color: #333;
+  }
+  
+  /* کارت هر کتاب */
+  .book-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* عنوان کتاب */
+  .book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  /* جزئیات دیگر */
+  .book-info {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+  }
+  
+  /* ستاره‌ها */
+  .stars {
+    font-size: 1.5rem;
+    color: #f1c40f;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+  }
+  
+  .star {
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  
+  .star:hover {
+    transform: scale(1.2);
+  }
+  
+  /* فرم افزودن کتاب */
+  .add-book-form {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .add-book-form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .add-book-form button {
+    padding: 0.6rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-book-form button:hover {
+    background-color: #2980b9;
+  }

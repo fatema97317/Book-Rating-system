@@ -66,9 +66,9 @@ function BookItem({ book }) {
   const [temRatig, setTemRating] = useState(0)
 
   return (
-    <div>
-      <h4>Title : {book.Title}</h4>
-      <p>year : {book.PublishYear}</p>
+    <div className='book-card'>
+      <h4 className='book-title '>Title : {book.Title}</h4>
+      <p className='book-info'>year : {book.PublishYear}</p>
       <p> rating : {Rating}</p>
       <StarRating
         rating={Rating}
@@ -168,7 +168,7 @@ function AddBookForm({ onAddBook }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='add-book-form '>
       <input
         type='text'
         value={Title}
