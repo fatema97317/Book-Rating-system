@@ -75,6 +75,8 @@ function BookItem({ book }) {
         temRatig={temRatig}
         onSetRating={setRating}
         onSetTemRating={setTemRating}
+        messages={['terrible', 'okay', 'good', 'great', 'Amazing']}
+        maxrating={5}
 
       />
 
@@ -82,7 +84,7 @@ function BookItem({ book }) {
   )
 }
 
-function StarRating({ rating, temRatig, onSetRating, onSetTemRating }) {
+function StarRating({ rating, temRatig, onSetRating, onSetTemRating, messages, maxrating }) {
 
   function handleRating(rating) {
     onSetRating(rating);
@@ -90,8 +92,8 @@ function StarRating({ rating, temRatig, onSetRating, onSetTemRating }) {
   }
   return (
     <div>
-      <div>
-        {Array.from({ length: 5 }, (_, i) =>
+      <div >
+        {Array.from({ length: maxrating }, (_, i) =>
           <Stars key={i}
             onRate={() => handleRating(i + 1)}
             full={temRatig ? temRatig >= i + 1 : rating >= i + 1}
@@ -100,8 +102,8 @@ function StarRating({ rating, temRatig, onSetRating, onSetTemRating }) {
 
           />
         )}
-        <span>
-          {temRatig || rating || ''}
+        <span className='stars'>
+          {messages.length === maxrating ? messages[temRatig ? temRatig - 1 : rating - 1] : temRatig || rating || ''}
         </span>
       </div>
     </div>
@@ -136,7 +138,7 @@ function Stars({ onRate, full, onOVer, onLeave }) {
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke='#000'
+        stroke='#fcc419'
 
 
 
